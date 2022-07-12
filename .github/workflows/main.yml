@@ -34,4 +34,4 @@ jobs:
       - name: Push to Hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://Joshagibby:$HF_TOKEN@https://huggingface.co/spaces/Joshagibby/Personal-Widget-Page main
+        run: git push -f https://Joshagibby:$HF_TOKEN@https://huggingface.co/spaces/Joshagibby/Personal-Widget-Page main
