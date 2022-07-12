@@ -2,6 +2,7 @@ name: Sync to Hugging face hub
 on:
   push:
     branches: [main]
+    
   workflow_dispatch:
 
 jobs:
@@ -14,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push -f https://Joshagibby:$HF_TOKEN@https://huggingface.co/spaces/Joshagibby/Personal-Widget-Page
+        run: git push -f https://Joshagibby:$HF_TOKEN@https://huggingface.co/spaces/Joshagibby/Personal-Widget-Page main
