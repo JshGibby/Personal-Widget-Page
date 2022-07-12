@@ -1,9 +1,7 @@
 name: Sync to Hugging face Hub
-
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 jobs:
