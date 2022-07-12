@@ -5,14 +5,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  deployment:
+  sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out
-        uses: actions/checkout@v2
+       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Push to Hub
+      - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: git push -f https://Joshagibby:$HF_TOKEN@https://huggingface.co/spaces/Joshagibby/Personal-Widget-Page
